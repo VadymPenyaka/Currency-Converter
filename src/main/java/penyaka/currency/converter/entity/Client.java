@@ -1,7 +1,13 @@
 package penyaka.currency.converter.entity;
 
-import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.UUID;
+@Getter
+@Setter
+@AllArgsConstructor
 public class Client {
     private UUID id;
     private String firstName;

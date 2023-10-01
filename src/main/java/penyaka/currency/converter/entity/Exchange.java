@@ -1,8 +1,16 @@
 package penyaka.currency.converter.entity;
 
-import java.time.LocalDateTime;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-public class ExchangeData {
+import java.time.LocalDateTime;
+import java.util.UUID;
+@Getter
+@Setter
+@AllArgsConstructor
+public class Exchange {
+    private UUID id;
     private LocalDateTime exchangeDate;
     private ExchangeType exchangeType;
     private double clientCurrencyAmount;
