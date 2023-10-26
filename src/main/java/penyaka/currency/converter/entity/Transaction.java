@@ -1,13 +1,14 @@
 package penyaka.currency.converter.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import penyaka.currency.converter.model.TransactionType;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 @Entity
 @Getter
@@ -15,24 +16,22 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee {
+public class Transaction {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
     @NotNull
-    @NotBlank
-    private String firstName;
+    private LocalDateTime exchangeDate;
     @NotNull
-    @NotBlank
-    private String lastName;
+    private TransactionType transactionType;
     @NotNull
-    @NotBlank
-    private String phone;
+    private double clientCurrencyAmount;
     @NotNull
-    @NotBlank
-    private String login;
-    @NotNull
-    @NotBlank
-    private String password;
+    private double bankCurrencyAmount;
+//    @NotNull
+//    private Currency clientCurrency;
+//    @NotNull
+//    private Currency  backCurrency;
+    //private Employee employee;
 
 }
