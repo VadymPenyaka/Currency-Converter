@@ -9,4 +9,5 @@ public interface CurrencyService {
     Optional<CurrencyDTO> getCurrencyByID (Long id);
     Optional<CurrencyDTO> getCurrencyByName (String shortName);
     Optional<CurrencyDTO> updateCurrencyById (Long id);
+    void deleteCurrencyById (Long id);
 }
