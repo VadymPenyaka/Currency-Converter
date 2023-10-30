@@ -7,7 +7,6 @@ import penyaka.currency.converter.model.CurrencyDTO;
 
 @Mapper
 public interface CurrencyMapper {
-    CurrencyMapper INSTANCE = Mappers.getMapper(CurrencyMapper.class);
     CurrencyDTO currencyToCurrencyDto (Currency currency);
     Currency currencyDtoToCurrency (CurrencyDTO currencyDTO);
 }

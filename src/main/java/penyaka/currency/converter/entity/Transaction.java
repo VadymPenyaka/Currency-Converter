@@ -1,8 +1,6 @@
 package penyaka.currency.converter.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -19,19 +17,21 @@ import java.util.UUID;
 public class Transaction {
     @Id
     @GeneratedValue(generator = "UUID")
+//    @Column(name = "id")
     private UUID id;
     @NotNull
+//    @Column(name = "exchange_date")
     private LocalDateTime exchangeDate;
     @NotNull
+//    @Column(name = "transaction_type")
     private TransactionType transactionType;
     @NotNull
+//    @Column(name = "client_currency_name")
     private double clientCurrencyAmount;
     @NotNull
+//    @Column(name = "bank_currency_amount")
     private double bankCurrencyAmount;
-//    @NotNull
 //    private Currency clientCurrency;
-//    @NotNull
-//    private Currency  backCurrency;
-    //private Employee employee;
+//    private Employee employee;
 
 }

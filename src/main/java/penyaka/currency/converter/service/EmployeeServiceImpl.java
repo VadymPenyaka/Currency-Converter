@@ -18,12 +18,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<EmployeeDTO> getAllEmployees() {
-        return employeeRepository.findAll();
+        return null;
     }
 
     @Override
     public Optional<EmployeeDTO> getEmployeeByID(UUID id) {
-        return employeeRepository.findById(id);
+        return null;
     }
 
     @Override
