@@ -13,8 +13,7 @@ public class TransactionDTO {
     private TransactionType transactionType;
     private double clientCurrencyAmount;
     private double bankCurrencyAmount;
-    private String clientCurrencyName;//change to currency type
-    private String  backCurrencyName;//change to currency type
+    private CurrencyDTO  foreignCurrency;
     private EmployeeDTO employee;
 
 

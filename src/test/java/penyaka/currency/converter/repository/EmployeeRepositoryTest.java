@@ -1,14 +1,17 @@
 package penyaka.currency.converter.repository;
 
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
 import penyaka.currency.converter.entity.Employee;
 
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 @DataJpaTest
+@RunWith(SpringRunner.class)
 class EmployeeRepositoryTest {
     @Autowired
     EmployeeRepository employeeRepository;
@@ -24,6 +27,7 @@ class EmployeeRepositoryTest {
                 .password("Password123")
                 .build());
 
+        employeeRepository.flush();
         assertThat(savedEmployee).isNotNull();
         assertThat(savedEmployee.getId()).isNotNull();
     }

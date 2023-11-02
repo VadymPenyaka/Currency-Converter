@@ -4,14 +4,15 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.util.Set;
+
 @Entity
 @Getter
 @Setter
 @Builder
-//@Table(name = "currency")
+@Table(name = "CURRENCY")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Currency {
@@ -30,6 +31,6 @@ public class Currency {
     private String shortName;
     @NotNull
     private LocalDate rateDate;
-//    @OneToOne(mappedBy = "currency")
-//    private Transaction transaction;
+    @OneToMany(mappedBy = "foreignCurrency")
+    private Set<Transaction> transactions;
 }

@@ -11,7 +11,6 @@ import penyaka.currency.converter.model.CurrencyDTO;
 import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {CurrencyMapperImpl.class})
@@ -42,7 +41,7 @@ class CurrencyMapperTest {
                 .fullName("Full name")
                 .shortName("UAH")
                 .rate(12.3)
-                .lastUpdateDate(LocalDate.now())
+                .rateDate(LocalDate.now())
                 .build();
 
         Currency currency = currencyMapper.currencyDtoToCurrency(currencyDTO);

@@ -26,6 +26,7 @@ class CurrencyRepositoryTest {
                 .rateDate(LocalDate.now())
                 .build());
 
+        currencyRepository.flush();
         assertThat(savedCurrency).isNotNull();
         assertThat(savedCurrency.getId()).isNotNull();
     }

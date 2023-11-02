@@ -10,5 +10,5 @@ public class CurrencyDTO {
     private double rate;
     private String fullName;
     private String shortName;
-    private LocalDate lastUpdateDate;
+    private LocalDate rateDate;
 }
